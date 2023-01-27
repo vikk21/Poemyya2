@@ -22,14 +22,11 @@ screen.blit(text, [375,175])
 
 
 pygame.display.flip() #värskendab aknaid
-running = True #Hoiab programmi töös
+#Alustab tsükliga
 
-#Sulgeb akna punasest ristist
-while running: #Loop
-    # Check for event if user has pushed
-    # any event in queue
-    for event in pygame.event.get(): # Alustab programm mis paneb akna kinni
-        # if event is of type quit then set
-        # running bool to false
-        if event.type == pygame.QUIT:
-            running = False
+run = True
+while run: #teeb tsükli     
+    for event in pygame.event.get(): #Käivitab mooduli mis sulgeb akna
+        if event.type == pygame.QUIT: #kui programm pannakse kinni läheb ka pygame kinni
+            run = False
+pygame.quit
