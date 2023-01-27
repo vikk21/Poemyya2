@@ -36,7 +36,8 @@ pygame.draw.arc(screen,[255,255,255], [240,0,80,50], -3.14/3, 1) #Joonistab kaar
 pygame.display.flip() #Värskendab akent
 #Alustab tsükliga
 run = True
-while run: #teeb tsükli
-    for event in pygame.event.get(): #kui alustatakse programm siis alustatakse pygame
+while run: #teeb tsükli     
+    for event in pygame.event.get(): #Käivitab mooduli mis sulgeb akna
         if event.type == pygame.QUIT: #kui programm pannakse kinni läheb ka pygame kinni
             run = False
+pygame.quit
